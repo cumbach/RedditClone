@@ -1,0 +1,13 @@
+<h1> <%= @user.username %> </h1>
+
+<ul>
+  <% @user.subs.each do |sub| %>
+    <li><%= link_to sub.title, edit_sub_url(sub) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "All_subs", subs_url %>
+
+<br>
+
+<%= link_to "Create Sub", new_sub_url %>
